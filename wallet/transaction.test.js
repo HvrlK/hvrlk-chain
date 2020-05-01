@@ -8,7 +8,7 @@ describe('Transaction', () => {
     wallet = new Wallet();
     amount = 50;
     recipient = 'r3c1p13nt';
-    transaction = Transaction.newTrasnaction(wallet, recipient, amount);
+    transaction = Transaction.newTransaction(wallet, recipient, amount);
   });
 
   it('outputs the `amount` subtracted from the wallet balance', () => {
@@ -37,7 +37,7 @@ describe('Transaction', () => {
   describe('transaction with an amount that exceeds balance', () => {
     beforeEach(() => {
       amount = 50000;
-      transaction = Transaction.newTrasnaction(wallet, recipient, amount);
+      transaction = Transaction.newTransaction(wallet, recipient, amount);
     });
 
     it('does not create the transaction', () => {
